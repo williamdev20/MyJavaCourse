@@ -1,0 +1,378 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Fatorial",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.hands_on.Fatorial",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "EnesimoTermoMaiorQueQuinhentos",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.hands_on.EnesimoTermoMaiorQueQuinhentos",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "EnesimoTermo",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.hands_on.EnesimoTermo",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "OMaiorEntreCincoNumeros",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.hands_on.OMaiorEntreCincoNumeros",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Divisores",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.ProjetosAParte.Divisores",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Multiplos",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.ProjetosAParte.Multiplos",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Populacao",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.hands_on.Populacao",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "InformacoesDoUsuario",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.hands_on.InformacoesDoUsuario",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "DeUmADez",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.hands_on.DeUmADez",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "LoopForPartesAusentes",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.LoopForPartesAusentes",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "LoopForWithMoreVariable",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.LoopForWithMoreVariable",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "LoopDoWhile",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.LoopDoWhile",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "LoopWhile",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula15.LoopWhile",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "AnoBissexto",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.AnoBissexto",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Equacao",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.Equacao",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "MiniCalculadora",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.MiniCalculadora",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Triangulo",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.Triangulo",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "NotaAluno",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.NotaAluno",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "DiaDaSemana",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.DiaDaSemana",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "ImpostoDeRenda",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.ImpostoDeRenda",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "AumentoSalario",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.AumentoSalario",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Turno",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.Turno",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "OrdemDecrescente",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.OrdemDecrescente",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "PositivoOuNegativo",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.PositivoOuNegativo",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "JogoDaAdivinhacao",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.JogoDaAdivinhacao",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Eleicao",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.hands_on.Eleicao",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "CondicionalSwitchCase",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.CondicionalSwitchCase",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "CondicionalAninhada",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.CondicionalAninhada",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "CondicionalIf",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula14.CondicionalIf",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "PintandoParede",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.PintandoParede",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "VariavelBoolean",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula11.VariavelBoolean",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "VariavelChar",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula11.VariavelChar",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "VariavelFloatEDouble",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula11.VariavelFloatEDouble",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "VariavelInteira",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula11.VariavelInteira",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "EntradaDeDados",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula12.EntradaDeDados",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "ClasseMath",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.ClasseMath",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "GeradorDeNumeros",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.GeradorDeNumeros",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "OperadorAritmetico",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.OperadorAritmetico",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "OperadorDeAtribuicao",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.OperadorDeAtribuicao",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "OperadorLogicoETernario",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.OperadorLogicoETernario",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "OperadorRelacional",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.OperadorRelacional",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "OperadorUnario",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.OperadorUnario",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "AjusteSalarial",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.AjusteSalarial",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "AluguelDeCarro",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.AluguelDeCarro",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "ConversorDeMedidas",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.ConversorDeMedidas",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "ConversorDeMoedas",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.ConversorDeMoedas",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "ConversorDeTemperatura",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.ConversorDeTemperatura",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "Descontos",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.Descontos",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "DobroTripoRaizQuadradaERaizCubica",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.DobroTripoRaizQuadradaERaizCubica",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "MediaAritmetica",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.MediaAritmetica",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "SucessorEAntecessor",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.SucessorEAntecessor",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
+            "name": "SuperTabuadaTabuada",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula13.hands_on.SuperTabuadaTabuada",
+            "projectName": "My_Curso_Java_d391aa75"
+        }
+    ]
+}
