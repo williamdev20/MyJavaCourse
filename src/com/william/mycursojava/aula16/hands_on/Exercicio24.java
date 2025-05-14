@@ -9,7 +9,7 @@ public class Exercicio24 {
     int[] vetorB = new int[vetorA.length];
 
     for (int i = 0; i < vetorA.length; i++) {
-      System.out.print("Digite o " + (i+1) + "número: ");
+      System.out.print("Digite o " + (i+1) + " número: ");
       vetorA[i] = scan.nextInt();
       if (vetorA[i] % 2 == 0) {
         vetorB[i] = 1;
@@ -17,7 +17,19 @@ public class Exercicio24 {
         vetorB[i] = 0;
       }
     }
-    for ()
+    
+    System.out.println("Os valores do vetor A são: ");
+    
+    for (int vetA : vetorA) {
+        System.out.print(vetA + ", ");
+    }
+    
+    System.out.println("\n E os valores de B são: ");
+    
+    
+    for (int vetB : vetorB) {
+        System.out.print(vetB + ", ");
+    }
 
     scan.close();
   }
