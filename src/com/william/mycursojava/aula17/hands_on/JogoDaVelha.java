@@ -12,24 +12,40 @@ public class JogoDaVelha {
         int posicao;
         int jogaPrimeiro = 0;
         int pecaOcupada = 0;
+        boolean[][] ocupado = new boolean[linha][coluna];
 
         for (int i = 0; i < tabuleiro.length; i++) {
             for (int j = 0; j < tabuleiro[i].length; j++) {
                 if (tabuleiro[i][j] != '\0') {
-                    System.out.printf("%c ", tabuleiro[i][j]);
+                    if (j == 2) {
+                        System.out.printf("%c", tabuleiro[i][j]);
+                    } else {
+                        System.out.printf("%c|", tabuleiro[i][j]);
+                    }
                 }
 
                 if (tabuleiro[i][j] == '\0') {
                     if (i == 0) {
-                        System.out.printf("%d ", (j + 1));
+                        if (j == 2) {
+                            System.out.printf("%d", (j + 1));
+                        } else {
+                            System.out.printf("%d|", (j + 1));
+                        }
                     } else if (i == 1) {
-                        System.out.printf("%d ", (j + 4));
+                        if (j == 2) {
+                            System.out.printf("%d", (j + 4));
+                        } else {
+                            System.out.printf("%d|", (j + 4));
+                        }
                     } else {
-                        System.out.printf("%d ", (j + 7));
+                        if (j == 2) {
+                            System.out.printf("%d", (j + 7));
+                        } else {
+                            System.out.printf("%d|", (j + 7));
+                        }
                     }
                 }
 
-                // Verificando se ganhou
             }
             System.out.println();
         }
@@ -69,6 +85,42 @@ public class JogoDaVelha {
                     coluna = 2;
                 }
 
+                if (ocupado[linha][coluna]) {
+                    while (ocupado[linha][coluna]) {
+                        System.out.println("Essa posição já está ocupada! Tente novamente! ");
+                        System.out.print("Jogador X, digite a posição que desejas jogar: ");
+                        posicao = input.nextInt();
+                        if (posicao == 1) {
+                            linha = 0;
+                            coluna = 0;
+                        } else if (posicao == 2) {
+                            linha = 0;
+                            coluna = 1;
+                        } else if (posicao == 3) {
+                            linha = 0;
+                            coluna = 2;
+                        } else if (posicao == 4) {
+                            linha = 1;
+                            coluna = 0;
+                        } else if (posicao == 5) {
+                            linha = 1;
+                            coluna = 1;
+                        } else if (posicao == 6) {
+                            linha = 1;
+                            coluna = 2;
+                        } else if (posicao == 7) {
+                            linha = 2;
+                            coluna = 0;
+                        } else if (posicao == 8) {
+                            linha = 2;
+                            coluna = 1;
+                        } else if (posicao == 9) {
+                            linha = 2;
+                            coluna = 2;
+                        }
+                    }
+                }
+                ocupado[linha][coluna] = true;
                 tabuleiro[linha][coluna] = 'X';
                 pecaOcupada++;
             } else {
@@ -104,6 +156,44 @@ public class JogoDaVelha {
                     linha = 2;
                     coluna = 2;
                 }
+
+                if (ocupado[linha][coluna]) {
+                    while (ocupado[linha][coluna]) {
+                        System.out.println("Essa posição já está ocupada! Tente novamente! ");
+                        System.out.print("Jogador O, digite a posição que desejas jogar: ");
+                        posicao = input.nextInt();
+                        if (posicao == 1) {
+                            linha = 0;
+                            coluna = 0;
+                        } else if (posicao == 2) {
+                            linha = 0;
+                            coluna = 1;
+                        } else if (posicao == 3) {
+                            linha = 0;
+                            coluna = 2;
+                        } else if (posicao == 4) {
+                            linha = 1;
+                            coluna = 0;
+                        } else if (posicao == 5) {
+                            linha = 1;
+                            coluna = 1;
+                        } else if (posicao == 6) {
+                            linha = 1;
+                            coluna = 2;
+                        } else if (posicao == 7) {
+                            linha = 2;
+                            coluna = 0;
+                        } else if (posicao == 8) {
+                            linha = 2;
+                            coluna = 1;
+                        } else if (posicao == 9) {
+                            linha = 2;
+                            coluna = 2;
+                        }
+                    }
+                }
+
+                ocupado[linha][coluna] = true;
                 tabuleiro[linha][coluna] = 'O';
                 pecaOcupada++;
             }
@@ -112,16 +202,33 @@ public class JogoDaVelha {
             for (int i = 0; i < tabuleiro.length; i++) {
                 for (int j = 0; j < tabuleiro[i].length; j++) {
                     if (tabuleiro[i][j] != '\0') {
-                        System.out.printf("%c ", tabuleiro[i][j]);
+                        if (j == 2) {
+                            System.out.printf("%c", tabuleiro[i][j]);
+                        } else {
+                            System.out.printf("%c|", tabuleiro[i][j]);
+                        }
+
                     }
 
                     if (tabuleiro[i][j] == '\0') {
                         if (i == 0) {
-                            System.out.printf("%d ", (j + 1));
+                            if (j == 2) {
+                                System.out.printf("%d", (j + 1));
+                            } else {
+                                System.out.printf("%d|", (j + 1));
+                            }
                         } else if (i == 1) {
-                            System.out.printf("%d ", (j + 4));
+                            if (j == 2) {
+                                System.out.printf("%d", (j + 4));
+                            } else {
+                                System.out.printf("%d|", (j + 4));
+                            }
                         } else {
-                            System.out.printf("%d ", (j + 7));
+                            if (j == 2) {
+                                System.out.printf("%d", (j + 7));
+                            } else {
+                                System.out.printf("%d|", (j + 7));
+                            }
                         }
                     }
 
