@@ -12,38 +12,46 @@ public class Exercicio5 {
         String[][] compromissos = new String[dia][hora];
         int opcao;
 
-        // Menu
-        System.out.println("1. Agendar compromisso");
-        System.out.println("2. Verificar compromissos");
-        System.out.println("3. Sair");
-        System.out.print("Escolha: ");
-        opcao = scan.nextInt();
+        do {
 
-        if (opcao == 1) {
-            System.out.print("Digite o dia: ");
-            dia = scan.nextInt();
-            dia--;
-            System.out.print("Digite a hora: ");
-            hora = scan.nextInt();
-            hora--;
+            System.out.println("1. Agendar compromisso");
+            System.out.println("2. Verificar compromissos");
+            System.out.println("3. Sair");
+            System.out.print("Escolha: ");
+            opcao = scan.nextInt();
+            System.out.println("----------------");
 
-            scan.nextLine();
+            if (opcao == 1) {
+                System.out.print("Digite o dia: ");
+                dia = scan.nextInt();
+                System.out.print("Digite a hora: ");
+                hora = scan.nextInt();
 
-            System.out.print("Digite o compromisso: ");
-            compromissos[dia][hora] = scan.nextLine();
-        } else if (opcao == 2) {
-            for (int i = 0; i < compromissos.length; i++) {
-                for (int j = 0; j < compromissos[i].length; j++) {
-                    if (compromissos[i][j] == null && compromissos[i][j].isEmpty()) {
-                        System.out.println("Nenhum compromisso foi agendado ainda!");
-                    } else {
-                        System.out.println("-------------COMPROMISSOS---------------");
-                        System.out.printf("%d as %dh -> %s", dia, hora, compromissos[dia][hora]);
+                scan.nextLine();
+
+                System.out.print("Digite o compromisso: ");
+                compromissos[dia-1][hora-1] = scan.nextLine();
+            } else if (opcao == 2) {
+                System.out.println("-------------COMPROMISSOS---------------");
+                label:
+                {
+                    for (int i = 0; i < compromissos.length; i++) {
+                        for (int j = 0; j < compromissos[i].length; j++) {
+                            if (compromissos[dia-1][hora-1] == null) {
+                                System.out.println("Nenhum compromisso foi agendado ainda!");
+                                System.out.println("----------------");
+                                break label;
+                            }
+                            if (compromissos[i][j] != null && !compromissos[i][j].isEmpty()) {
+                                System.out.printf("Dia %d às %dh - %s\n", (i+1), (j+1), compromissos[i][j]);
+                                System.out.println("----------------");
+                            }
+                        }
                     }
                 }
             }
-        }
 
+        } while (opcao != 3);
 
         scan.close();
     }
