@@ -4,227 +4,160 @@ import java.util.Scanner;
 
 public class JogoDaVelha {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("-=-=-=-=-JOGO DA VELHA-=-=-=-=-");
-
+        Scanner input = new Scanner(System.in);
         int linha = 3;
         int coluna = 3;
-        int[][] tabuleiro = new int[linha][coluna];
-
-        int jogador = 0;
-        int jogaPrimeiro = 0;
-        //int espaco;
+        char[][] tabuleiro = new char[linha][coluna];
         boolean ganhar = false;
-        boolean espacoValido = true;
+        int posicao;
+        int jogaPrimeiro = 0;
+        int pecaOcupada = 0;
 
-        char X = 'X';
-        char O = 'O';
-
-        // Imprimindo o tabuleiro na tela
         for (int i = 0; i < tabuleiro.length; i++) {
-            if (i == 0) {
-                for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                    if (j == 0) {
-                        System.out.printf(" %d | ", j + 1);
-                    } else if (j == 2) {
-                        System.out.printf("%d", j + 1);
-                    } else {
-                        System.out.printf("%d | ", j + 1);
-                    }
-                }
-            }
-
-            if (i == 1) {
-                for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                    if (j == 0) {
-                        System.out.printf(" %d | ", j + 4);
-                    } else if (j == 2) {
-                        System.out.printf("%d", j + 4);
-                    } else {
-                        System.out.printf("%d | ", j + 4);
-                    }
-                }
-            }
-
-            if (i == 2) {
-                for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                    if (j == 0) {
-                        System.out.printf(" %d | ", j + 7);
-                    } else if (j == 2) {
-                        System.out.printf("%d", j + 7);
-                    } else {
-                        System.out.printf("%d | ", j + 7);
-                    }
-                }
-            }
-            System.out.println();
-            if (i == 2) {
-                System.out.println();
-            } else {
-                System.out.println("---|---|---");
-            }
-        }
-
-        System.out.println("1. Jogador1 -> X");
-        System.out.println("2. Jogador2 -> O");
-        System.out.print("Escolha: ");
-        jogador = scan.nextInt();
-
-
-        // Imprimir o tabuleiro novamente
-        for (int i = 0; i < tabuleiro.length; i++) {
-            if (i == 0) {
-                for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                    if (j == 0) {
-                        System.out.printf(" %d | ", j + 1);
-                    } else if (j == 2) {
-                        System.out.printf("%d", j + 1);
-                    } else {
-                        System.out.printf("%d | ", j + 1);
-                    }
-                }
-            }
-
-            if (i == 1) {
-                for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                    if (j == 0) {
-                        System.out.printf(" %d | ", j + 4);
-                    } else if (j == 2) {
-                        System.out.printf("%d", j + 4);
-                    } else {
-                        System.out.printf("%d | ", j + 4);
-                    }
-                }
-            }
-
-            if (i == 2) {
-                for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                    if (j == 0) {
-                        System.out.printf(" %d | ", j + 7);
-                    } else if (j == 2) {
-                        System.out.printf("%d", j + 7);
-                    } else {
-                        System.out.printf("%d | ", j + 7);
-                    }
-                }
-            }
-            System.out.println();
-            if (i == 2) {
-                System.out.println();
-            } else {
-                System.out.println("---|---|---");
-            }
-        }
-
-
-        do {
-            // Captar o espaço que o jogador deseja
-            if (jogaPrimeiro % 2 == 0) {
-                System.out.print("Jogador X, escolha um espaço para jogar: ");
-                tabuleiro[linha][coluna] = scan.nextInt();
-                if (tabuleiro[linha][coluna] < 1 || tabuleiro[linha][coluna] > 9) {
-                    do {
-                        System.out.print("Espaço inválido! Escolha um espaço adequado: ");
-                        tabuleiro[linha][coluna] = scan.nextInt();
-                    } while (tabuleiro[linha][coluna] < 1 || tabuleiro[linha][coluna] > 9);
-
+            for (int j = 0; j < tabuleiro[i].length; j++) {
+                if (tabuleiro[i][j] != '\0') {
+                    System.out.printf("%c ", tabuleiro[i][j]);
                 }
 
-                if (tabuleiro[linha][coluna] > 0 && tabuleiro[linha][coluna] <= 3) {
-                    linha = 0;
-                    tabuleiro[linha][coluna] = 'X';
-                } else if (tabuleiro[linha][coluna] > 3 && tabuleiro[linha][coluna] <= 6) {
-                    linha = 1;
-                    tabuleiro[linha][coluna] = 'X';
-                } else if (tabuleiro[linha][coluna] > 6 && tabuleiro[linha][coluna] <= 9) {
-                    linha = 2;
-                    tabuleiro[linha][coluna] = 'X';
-                }
-
-                jogaPrimeiro++;
-            } else {
-                System.out.print("Jogador O, escolha um espaço para jogar: ");
-                tabuleiro[linha][coluna] = scan.nextInt();
-                if (tabuleiro[linha][coluna] < 1 || tabuleiro[linha][coluna] > 9) {
-                    do {
-                        System.out.print("Espaço inválido! Escolha um espaço adequado: ");
-                        tabuleiro[linha][coluna] = scan.nextInt();
-                    } while (tabuleiro[linha][coluna] < 1 || tabuleiro[linha][coluna] > 9);
-                }
-
-                if (tabuleiro[linha][coluna] > 0 && tabuleiro[linha][coluna] <= 3) {
-                    linha = 0;
-                    tabuleiro[linha][coluna] = 'O';
-                } else if (tabuleiro[linha][coluna] > 3 && tabuleiro[linha][coluna] <= 6) {
-                    linha = 1;
-                    tabuleiro[linha][coluna] = 'O';
-                } else if (tabuleiro[linha][coluna] > 6 && tabuleiro[linha][coluna] <= 9) {
-                    linha = 2;
-                    tabuleiro[linha][coluna] = 'O';
-                }
-
-                jogaPrimeiro++;
-            }
-            // Imprimir o tabuleiro novamente
-            for (int i = 0; i < tabuleiro.length; i++) {
-                if (i == linha) {
-
-
+                if (tabuleiro[i][j] == '\0') {
                     if (i == 0) {
-                        for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                            if (j == 0) {
-                                System.out.printf(" %d | ", tabuleiro[linha][coluna]);
-                            } else if (j == 2) {
-                                System.out.printf("%d", j + 1);
-                            } else {
-                                System.out.printf("%d | ", j + 1);
-                            }
-                        }
-                    }
-
-                    if (i == 1) {
-                        for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                            if (j == 0) {
-                                System.out.printf(" %d | ", j + 4);
-                            } else if (j == 2) {
-                                System.out.printf("%d", j + 4);
-                            } else {
-                                System.out.printf("%d | ", j + 4);
-                            }
-                        }
-                    }
-
-                    if (i == 2) {
-                        for (int j = 0; j < tabuleiro[i].length; j++) {
-
-                            if (j == 0) {
-                                System.out.printf(" %d | ", j + 7);
-                            } else if (j == 2) {
-                                System.out.printf("%d", j + 7);
-                            } else {
-                                System.out.printf("%d | ", j + 7);
-                            }
-                        }
-                    }
-                    System.out.println();
-                    if (i == 2) {
-                        System.out.println();
+                        System.out.printf("%d ", (j + 1));
+                    } else if (i == 1) {
+                        System.out.printf("%d ", (j + 4));
                     } else {
-                        System.out.println("---|---|---");
+                        System.out.printf("%d ", (j + 7));
                     }
                 }
+
+                // Verificando se ganhou
             }
-        } while (!ganhar);
+            System.out.println();
+        }
+
+        while (!ganhar) {
+            if (jogaPrimeiro % 2 == 0) {
+                System.out.print("Jogador X, digite a posição que desejas jogar: ");
+                posicao = input.nextInt();
+                jogaPrimeiro++;
+
+                if (posicao == 1) {
+                    linha = 0;
+                    coluna = 0;
+                } else if (posicao == 2) {
+                    linha = 0;
+                    coluna = 1;
+                } else if (posicao == 3) {
+                    linha = 0;
+                    coluna = 2;
+                } else if (posicao == 4) {
+                    linha = 1;
+                    coluna = 0;
+                } else if (posicao == 5) {
+                    linha = 1;
+                    coluna = 1;
+                } else if (posicao == 6) {
+                    linha = 1;
+                    coluna = 2;
+                } else if (posicao == 7) {
+                    linha = 2;
+                    coluna = 0;
+                } else if (posicao == 8) {
+                    linha = 2;
+                    coluna = 1;
+                } else if (posicao == 9) {
+                    linha = 2;
+                    coluna = 2;
+                }
+
+                tabuleiro[linha][coluna] = 'X';
+                pecaOcupada++;
+            } else {
+                System.out.print("Jogador O, digite a posição que desejas jogar: ");
+                posicao = input.nextInt();
+                jogaPrimeiro++;
+
+                if (posicao == 1) {
+                    linha = 0;
+                    coluna = 0;
+                } else if (posicao == 2) {
+                    linha = 0;
+                    coluna = 1;
+                } else if (posicao == 3) {
+                    linha = 0;
+                    coluna = 2;
+                } else if (posicao == 4) {
+                    linha = 1;
+                    coluna = 0;
+                } else if (posicao == 5) {
+                    linha = 1;
+                    coluna = 1;
+                } else if (posicao == 6) {
+                    linha = 1;
+                    coluna = 2;
+                } else if (posicao == 7) {
+                    linha = 2;
+                    coluna = 0;
+                } else if (posicao == 8) {
+                    linha = 2;
+                    coluna = 1;
+                } else if (posicao == 9) {
+                    linha = 2;
+                    coluna = 2;
+                }
+                tabuleiro[linha][coluna] = 'O';
+                pecaOcupada++;
+            }
 
 
-        scan.close();
+            for (int i = 0; i < tabuleiro.length; i++) {
+                for (int j = 0; j < tabuleiro[i].length; j++) {
+                    if (tabuleiro[i][j] != '\0') {
+                        System.out.printf("%c ", tabuleiro[i][j]);
+                    }
+
+                    if (tabuleiro[i][j] == '\0') {
+                        if (i == 0) {
+                            System.out.printf("%d ", (j + 1));
+                        } else if (i == 1) {
+                            System.out.printf("%d ", (j + 4));
+                        } else {
+                            System.out.printf("%d ", (j + 7));
+                        }
+                    }
+
+                }
+                System.out.println();
+            }
+
+            // Verificando se ganhou
+            if (tabuleiro[0][0] == 'X' && tabuleiro[0][1] == 'X' && tabuleiro[0][2] == 'X' ||
+            tabuleiro[1][0] == 'X' && tabuleiro[1][1] == 'X' && tabuleiro[1][2] == 'X' ||
+            tabuleiro[2][0] == 'X' && tabuleiro[2][1] == 'X' && tabuleiro[2][2] == 'X' ||
+            tabuleiro[0][0] == 'X' && tabuleiro[1][0] == 'X' && tabuleiro[2][0] == 'X' ||
+            tabuleiro[0][1] == 'X' && tabuleiro[1][1] == 'X' && tabuleiro[2][1] == 'X' ||
+            tabuleiro[0][2] == 'X' && tabuleiro[1][2] == 'X' && tabuleiro[2][2] == 'X' ||
+            tabuleiro[0][0] == 'X' && tabuleiro[1][1] == 'X' && tabuleiro[2][2] == 'X' ||
+            tabuleiro[0][2] == 'X' && tabuleiro[1][1] == 'X' && tabuleiro[2][0] == 'X'){
+                System.out.println("O JOGADOR X GANHOU!");
+                ganhar = true;
+
+            } else if (tabuleiro[0][0] == 'O' && tabuleiro[0][1] == 'O' && tabuleiro[0][2] == 'O' ||
+                    tabuleiro[1][0] == 'O' && tabuleiro[1][1] == 'O' && tabuleiro[1][2] == 'O' ||
+                    tabuleiro[2][0] == 'O' && tabuleiro[2][1] == 'O' && tabuleiro[2][2] == 'O' ||
+                    tabuleiro[0][0] == 'O' && tabuleiro[1][0] == 'O' && tabuleiro[2][0] == 'O' ||
+                    tabuleiro[0][1] == 'O' && tabuleiro[1][1] == 'O' && tabuleiro[2][1] == 'O' ||
+                    tabuleiro[0][2] == 'O' && tabuleiro[1][2] == 'O' && tabuleiro[2][2] == 'O' ||
+                    tabuleiro[0][0] == 'O' && tabuleiro[1][1] == 'O' && tabuleiro[2][2] == 'O' ||
+                    tabuleiro[0][2] == 'O' && tabuleiro[1][1] == 'O' && tabuleiro[2][0] == 'O') {
+                System.out.println("O JOGADOR O GANHOU!");
+                ganhar = true;
+
+            } else if (pecaOcupada >= 9) {
+                System.out.println("O JOGO DEU VELHA!");
+                ganhar = true;
+            }
+        }
+
+        input.close();
     }
 }
