@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Exercicio02",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula19.hands_on.Exercicio02",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
             "name": "Fatorial",
             "request": "launch",
             "mainClass": "com.william.mycursojava.aula15.hands_on.Fatorial",
