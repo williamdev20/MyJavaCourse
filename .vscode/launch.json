@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Exercicio03",
+            "request": "launch",
+            "mainClass": "com.william.mycursojava.aula19.hands_on.Exercicio03",
+            "projectName": "My_Curso_Java_d391aa75"
+        },
+        {
+            "type": "java",
             "name": "Exercicio02",
             "request": "launch",
             "mainClass": "com.william.mycursojava.aula19.hands_on.Exercicio02",

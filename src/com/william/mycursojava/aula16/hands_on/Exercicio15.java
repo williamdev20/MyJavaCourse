@@ -39,5 +39,7 @@ public class Exercicio15 {
     System.out.printf("O percentual de números pares é de %d%% \n", percentualPar);
     System.out.printf("E o percentual de números ímpares é de %d%% \n", percentualImpar);
     
+
+    scan.close();
   }
 }
